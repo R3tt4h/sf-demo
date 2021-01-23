@@ -9,14 +9,21 @@
 
             </div>
             <div class="col-md-4">
-                <h1>Titre : {{ book.title }}</h1>
+                <h1>{{ book.title }}</h1>
             </div>
 
         </div>
 
         <nav class="nav nav-tabs" id="tab"></nav>
         <p>
-            Description : {{ book.description }}
+            {{ book.description }}
         </p>
+        {% if app.user %}
+       <a class="btn btn-primary" href="{{ '/admin' }}" style="color: white; text-decoration: none">Retour</a>
+        {% else %}
+        <a class="btn btn-primary" href="{{ '/' }}" style="color: white; text-decoration: none">Retour</a>
+        {% endif %}
+
+
     </div>
 {% endblock %}

@@ -22,7 +22,7 @@
 
             {% for book in books %}
                 <tr>
-                    <td>{{ book.title }}</td>
+                    <td><a href="{{ path('library.show', {id: book.id, slug: book.slug}) }}" style=" text-decoration: none">{{ book.title }}</a></td>
                     <td>
                         <a href="{{ path('admin.library.edit', {id: book.id}) }}" class="btn btn-secondary">Éditer</a>
                         <form method="post" action="{{ path('admin.library.delete', {id: book.id}) }}" style="display:
