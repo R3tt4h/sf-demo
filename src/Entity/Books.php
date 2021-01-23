@@ -6,6 +6,7 @@ use App\Repository\BooksRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
 
+
 /**
  * @ORM\Entity(repositoryClass=BooksRepository::class)
  */
@@ -80,7 +81,7 @@ class Books
 
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
-        $this->created_at = $created_at;
+        $this->created_att = $created_at;
 
         return $this;
     }
