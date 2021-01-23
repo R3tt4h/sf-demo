@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04c9432b-7e4d-417a-a051-c6583d242acf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../monblog/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../monblog/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../monblog/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../monblog/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../monblog/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../monblog/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../monblog/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../monblog/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../monblog/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../monblog/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../monblog/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../monblog/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../monblog/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../monblog/src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../monblog/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../monblog/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +16,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../monblog" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -155,7 +148,7 @@
       <updated>1611339176409</updated>
       <workItem from="1611339177763" duration="2996000" />
       <workItem from="1611342202991" duration="22000" />
-      <workItem from="1611342239463" duration="6098000" />
+      <workItem from="1611342239463" duration="6701000" />
     </task>
     <servers />
   </component>
