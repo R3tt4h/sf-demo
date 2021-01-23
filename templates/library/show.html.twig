@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title book.title %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+                <h1>Titre : {{ book.title }}</h1>
+            </div>
+
+        </div>
+
+        <nav class="nav nav-tabs" id="tab"></nav>
+        <p>
+            Description : {{ book.description }}
+        </p>
+    </div>
+{% endblock %}

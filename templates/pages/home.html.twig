@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Home' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1> Bienvenue !</h1>
+        <p>Ce site a pour but d'apprendre à utiliser Symfony.</p>
+    </div>
+
+    <div class="container">
+        <h2>Latest books</h2>
+        <div class="row flex">
+            {% for book in books %}
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{{ path('library.show', {id: book.id, slug: book.slug}) }}">{{ book.title }}</a>
+                        </h5>
+                        <p class="card-text">{{ book.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
