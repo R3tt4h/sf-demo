@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Books;
+use App\Entity\Search;
+use App\Form\SearchType;
 use App\Repository\BooksRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
@@ -35,15 +37,20 @@ class LibraryController extends AbstractController
      */
     public function index(PaginatorInterface $paginator, Request $request): Response
     {
+        $search = new Search();
+        $form = $this->createForm(SearchType::class, $search);
+        $form->handleRequest($request);
+
         $books = $paginator->paginate(
-            $this->repository->findAllVisibleQuery(),
+            $this->repository->findAllVisibleQuery($search),
             $request->query->getInt('page', 1), 12 /*page number*/
 
         );
 
         return $this->render('library/index.html.twig', [
             'current_menu' => 'libraries',
-            'books' => $books
+            'books' => $books,
+            'form' => $form->createView()
         ]);
     }
 

@@ -18,6 +18,7 @@
                         <h5 class="card-title">
                             <a href="{{ path('library.show', {id: book.id, slug: book.slug}) }}">{{ book.title }}</a>
                         </h5>
+                        <p class="card-text" style="font-style: italic; color: cornflowerblue">{{ book.genreType }}</p>
                         <p class="card-text">{{ book.description }}</p>
                     </div>
                 </div>

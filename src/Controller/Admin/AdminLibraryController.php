@@ -2,7 +2,9 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Search;
 use App\Form\BooksType;
+use App\Form\SearchType;
 use App\Repository\BooksRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
@@ -37,12 +39,19 @@ class AdminLibraryController extends AbstractController
      */
     public function index(PaginatorInterface $paginator, Request $request)
     {
+        $search = new Search();
+        $form = $this->createForm(SearchType::class, $search);
+        $form->handleRequest($request);
+
         $books = $paginator->paginate(
-            $this->repository->findAllVisibleQuery(),
+            $this->repository->findAllVisibleQuery($search),
             $request->query->getInt('page', 1), 12 /*page number*/
 
         );
-        return $this->render('admin/library/index.html.twig', compact('books'));
+        return $this->render('admin/library/index.html.twig', [
+            'books' => $books,
+            'form' => $form->createView()
+        ]);
     }
 
     /**

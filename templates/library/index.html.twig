@@ -6,6 +6,20 @@
     <div class="jumbotron text-center">
         <h1> Ma bibliothèque</h1>
     </div>
+    <div class="jumbotron">
+        <div class="container">
+            {{ form_start(form) }}
+            <div class="d-flex md-2">
+                <div class="p-2 mb-4">
+                    {{ form_row(form.genre) }}
+                </div>
+                <div class="p-2 mt-4">
+                    <button class="btn btn-primary">Rechercher</button>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
 
     <div class="container">
         <div class="row flex">
@@ -16,6 +30,7 @@
                             <h5 class="card-title">
                                 <a href="{{ path('library.show', {id: book.id, slug: book.slug}) }}">{{ book.title }}</a>
                             </h5>
+                            <p class="card-text" style="font-style: italic; color: cornflowerblue">{{ book.genreType }}</p>
                             <p class="card-text">{{ book.description }}</p>
                         </div>
                     </div>

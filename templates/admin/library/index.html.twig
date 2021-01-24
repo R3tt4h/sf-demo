@@ -11,13 +11,27 @@
                 {{ message }}
             </div>
         {% endfor %}
-        <div class="text-right">
-            <a href="{{ path('admin.library.new') }}" class="btn btn-primary">Ajouter un livre</a>
-        </div>
+            <div class="container">
+                {{ form_start(form) }}
+                <div class="d-flex justify-content-start">
+                    <div class="p-2">
+                        {{ form_row(form.genre) }}
+                    </div>
+                    <div class="p-2 mt-4">
+                        <button class="btn btn-primary">Rechercher</button>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+            <div class=" mt-4 justify-content">
+                <a href="{{ path('admin.library.new') }}" class="btn btn-primary">Ajouter un livre</a>
+            </div>
+
         <table class="table table-striped">
             <thead>
             <tr>
                 <th>Titre</th>
+                <th>Genre</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -26,6 +40,7 @@
             {% for book in books %}
                 <tr>
                     <td>{{ book.title }}</td>
+                    <td>{{ book.genreType }}</td>
                     <td>
                         <a href="{{ path('admin.library.edit', {id: book.id}) }}" class="btn btn-secondary">Éditer</a>
                         <form method="post" action="{{ path('admin.library.delete', {id: book.id}) }}" style="display:

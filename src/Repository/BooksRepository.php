@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Books;
+use App\Entity\Search;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
@@ -24,11 +25,16 @@ class BooksRepository extends ServiceEntityRepository
     /**
      * @return Query
      */
-    public function findAllVisibleQuery(): Query
+    public function findAllVisibleQuery(Search $search): Query
     {
-        return $this->findVisibleQuery()
-            ->getQuery()
-            ;
+        $query = $this->findVisibleQuery();
+
+        if($search->getGenre()){
+            $query = $query
+                ->where('b.genre = :genre')
+                ->setParameter('genre', $search->getGenre());
+        }
+        return $query->getQuery();
     }
 
     /**

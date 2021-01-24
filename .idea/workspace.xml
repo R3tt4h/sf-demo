@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04c9432b-7e4d-417a-a051-c6583d242acf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/registration/oldregister.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/LibraryFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/LibraryFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Books.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Books.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/BooksType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/BooksType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/library/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/library/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/library/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/library/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminLibraryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminLibraryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LibraryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LibraryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BooksRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BooksRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/library/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/library/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/library/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/library/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +151,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
@@ -158,6 +166,7 @@
       <updated>1611339176409</updated>
       <workItem from="1611339177763" duration="2996000" />
       <workItem from="1611342202991" duration="22000" />
+      <workItem from="1611505651778" duration="6162000" />
     </task>
     <servers />
   </component>
@@ -165,14 +174,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="425" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611505473226">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="425" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1611505473226" />
+    <state x="502" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1611505933908">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="502" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1611505933908" />
     <state x="472" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611342650485">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="472" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1611342650485" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611431223478">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611507993090">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1611431223478" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1611507993090" />
+    <state x="469" y="273" key="NewPhpClassDialog" timestamp="1611505528093">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="469" y="273" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1611505528093" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1611415261258">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
