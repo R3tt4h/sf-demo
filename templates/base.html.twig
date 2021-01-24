@@ -21,7 +21,10 @@
                 {% if app.user %}
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if current_menu is defined and current_menu == 'libraries' %} active {% endif %}" aria-current="page" href="{{ '/admin' }}">Ma Bibliothèque</a>
+                        <a class="nav-link {% if current_menu is defined and current_menu == 'libraries' %} active {% endif %}" aria-current="page" href="{{ '/library' }}">| Ma bibliothèque |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_menu is defined and current_menu == 'libraries' %} active {% endif %}" aria-current="page" href="{{ '/admin' }}">| Gestion |</a>
                     </li>
                 </ul>
                 {% endif %}

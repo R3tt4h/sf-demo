@@ -11,6 +11,9 @@
                 {{ message }}
             </div>
         {% endfor %}
+        <div class="text-right">
+            <a href="{{ path('admin.library.new') }}" class="btn btn-primary">Ajouter un livre</a>
+        </div>
         <table class="table table-striped">
             <thead>
             <tr>
@@ -22,7 +25,7 @@
 
             {% for book in books %}
                 <tr>
-                    <td><a href="{{ path('library.show', {id: book.id, slug: book.slug}) }}" style=" text-decoration: none">{{ book.title }}</a></td>
+                    <td>{{ book.title }}</td>
                     <td>
                         <a href="{{ path('admin.library.edit', {id: book.id}) }}" class="btn btn-secondary">Éditer</a>
                         <form method="post" action="{{ path('admin.library.delete', {id: book.id}) }}" style="display:
@@ -37,9 +40,8 @@
             {%  endfor %}
             </tbody>
         </table>
-
-        <div class="text-right">
-            <a href="{{ path('admin.library.new') }}" class="btn btn-primary">Ajouter un livre</a>
+        <div class="pagination mt-4">
+            {{ knp_pagination_render(books) }}
         </div>
     </div>
 

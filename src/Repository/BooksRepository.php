@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Books;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -21,13 +22,12 @@ class BooksRepository extends ServiceEntityRepository
     }
 
     /**
-     * @return Book[]
+     * @return Query
      */
-    public function findAllVisible(): array
+    public function findAllVisibleQuery(): Query
     {
         return $this->findVisibleQuery()
             ->getQuery()
-            ->getResult()
             ;
     }
 
@@ -37,11 +37,12 @@ class BooksRepository extends ServiceEntityRepository
     public function findLatest(): array
     {
         return $this->findVisibleQuery()
-            ->setMaxResults(2)
+            ->setMaxResults(3)
             ->getQuery()
             ->getResult()
             ;
     }
+
     // /**
     //  * @return Books[] Returns an array of Books objects
     //  */
@@ -73,7 +74,7 @@ class BooksRepository extends ServiceEntityRepository
     private function findVisibleQuery(): QueryBuilder
     {
         return $this->createQueryBuilder('b')
-            ->orderBy('b.id', 'ASC')
+            ->orderBy('b.id', 'DESC')
             ;
     }
 }

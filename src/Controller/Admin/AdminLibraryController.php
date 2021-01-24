@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Form\BooksType;
 use App\Repository\BooksRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -34,9 +35,13 @@ class AdminLibraryController extends AbstractController
      * @Route("/admin", name="admin.library.index")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index()
+    public function index(PaginatorInterface $paginator, Request $request)
     {
-        $books = $this->repository->findAll();
+        $books = $paginator->paginate(
+            $this->repository->findAllVisibleQuery(),
+            $request->query->getInt('page', 1), 12 /*page number*/
+
+        );
         return $this->render('admin/library/index.html.twig', compact('books'));
     }
 
