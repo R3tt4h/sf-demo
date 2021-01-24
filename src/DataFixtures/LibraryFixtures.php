@@ -6,6 +6,7 @@ use App\Entity\Books;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
+use phpDocumentor\Reflection\Types\Integer;
 
 class LibraryFixtures extends Fixture
 {
@@ -15,9 +16,11 @@ class LibraryFixtures extends Fixture
         for($i = 0; $i < 100; $i++)
         {
             $book = new Books();
-            $book
-                ->setTitle($faker->words(3, true))
-                ->setDescription($faker->sentences(5, true));
+             $book
+                 ->setTitle($faker->words(3, true))
+                 ->setDescription($faker->sentences(5, true))
+                 ->setGenre($faker->randomKey(Books::GENRE));
+
             $manager->persist($book);
         }
         // $product = new Product();

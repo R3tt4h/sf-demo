@@ -12,6 +12,14 @@ use Cocur\Slugify\Slugify;
  */
 class Books
 {
+    const GENRE = [
+        0 => 'Action',
+        1 => 'Aventure',
+        2 => 'Romance',
+        3 => 'Drame',
+        4 => 'Comédie'
+    ];
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -28,6 +36,11 @@ class Books
      * @ORM\Column(type="text", nullable=true)
      */
     private $description;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $genre;
 
     /**
      * @ORM\Column(type="datetime")
@@ -81,8 +94,25 @@ class Books
 
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
-        $this->created_att = $created_at;
+        $this->created_at = $created_at;
 
         return $this;
+    }
+
+    public function getGenre(): ?int
+    {
+       return $this-> genre;
+    }
+
+    public function setGenre(int $genre): self
+    {
+        $this-> genre = $genre;
+
+        return $this;
+    }
+
+    public function getGenreType(): string
+    {
+        return self::GENRE[$this->genre];
     }
 }
